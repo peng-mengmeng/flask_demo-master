@@ -5,7 +5,7 @@
     <title>Flask + pyecharts 整合示例</title>
     <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='bootstrap/css/bootstrap.min.css') }}"/>
     <script type="text/javascript" src="{{ url_for('static', filename='bootstrap/js/bootstrap.min.js') }}"></script>
-    {#{{ echarts_js_dependencies(hm) }}#}
+    {#{{ echarts_js_dependencies(m) }}#}
     {% for jsfile_name in script_list %}
         <script src="{{ host }}/{{ jsfile_name }}.js"></script>
     {% endfor %}
@@ -35,23 +35,15 @@
 </nav>
 <!-- /.navbar -->
 <div class="container">
-{#    <p>
-        这是一个由 Flask 和 pyecharts 整合的一个例子。主要特点在于：
-    </p>
-    <ul>
-        <li>完全使用本地的js文件</li>
-        <li>在模板文件中使用 echarts_* 模板函数。</li>
-    </ul>#}
-
     <div class="panel panel-default">
-        <div class="panel-heading">日历热力图示例</div>
+        <div class="panel-heading">雄哥词典</div>
         <div class="panel-body">
-            {#{{ echarts_container(hm) }}#}
-            {{ myechart2}}
+            {#{{ echarts_container(m) }}#}
+            {{ myechart}}
         </div>
     </div>
 
-    {#{{ echarts_js_content(hm) }}#}
+    {#{{ echarts_js_content(m) }}#}
 </div>
 </body>
 </html>

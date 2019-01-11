@@ -73,5 +73,73 @@ def fujian():
     return render_template('fujian_map.html', myechart=map.render_embed(), host=REMOTE_HOST,
                            script_list=map.get_js_dependencies(), )
 
+
+
+from pyecharts import Tree
+@app.route('/tree/')
+def tree():
+    data = [
+        {
+            "children": [
+                {
+                    "children": [],
+                    "name": "海林"
+                },
+                {
+                    "children": [],
+                    "name": "道固"
+                },
+                {
+                    "children": [],
+                    "name": "我"
+                }
+            ],
+            "name": "雄哥"
+        }
+    ]
+
+    tree = Tree("雄哥的小弟阵容")
+    tree.add("", data)
+    # tree.render()
+    return render_template('fujian_map.html', myechart=tree.render_embed(), host=REMOTE_HOST,
+                           script_list=tree.get_js_dependencies(), )
+
+
+
+from pyecharts import WordCloud
+@app.route('/wordcloud/')
+def wordcloud():
+    name = [
+        '余小雄', '雄哥组','小雄','昨天还没睡够啊','不是9点就回去','道固','讨论阵容、分路','海林:后羿','彭涛:悟空']
+    value = [
+        10000, 6181, 4386, 4055, 2467, 2244, 1898, 1484, 1112]
+    wordcloud = WordCloud(width=1300, height=620)
+    wordcloud.add("", name, value, word_size_range=[20, 100])
+    # wordcloud.render()
+    return render_template('wordcloud.html', myechart=wordcloud.render_embed(), host=REMOTE_HOST,
+                           script_list=wordcloud.get_js_dependencies(), )
+
+
+from pyecharts import Map
+@app.route('/map/')
+def xiong_map():
+    value = [200, 190,]
+    attr = ['汕头市', '汕尾市']
+    map = Map("雄哥的势力范围", width=1200, height=600)
+    map.add(
+        "", attr, value, maptype="广东", is_visualmap=True, visual_text_color="#000",is_label_show=True
+    )
+    # map.render()
+    return render_template('map.html', myechart=map.render_embed(), host=REMOTE_HOST,
+                           script_list=map.get_js_dependencies(), )
+
+
+
+
+
+
+
+
+
 if __name__ == "__main__":
     app.run()
