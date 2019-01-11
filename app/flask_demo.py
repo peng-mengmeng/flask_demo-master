@@ -41,7 +41,10 @@ def index():
 @app.route("/heatmap/")
 def heatmap():
     hm = create_heatmap()
-    return render_template('heatmap.html', hm=hm)
+    # return render_template('heatmap.html', hm=hm)
+    return render_template('heatmap.html', myechart2=hm.render_embed(), host=REMOTE_HOST,
+                           script_list=hm.get_js_dependencies(), )
+
 
 
 def create_heatmap():
