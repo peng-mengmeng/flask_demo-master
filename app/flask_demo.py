@@ -67,8 +67,8 @@ def fujian():
     map = Map("福建地图示例", width='100%', height=600)
     map.add("", attr, value, maptype='湖北',is_visualmap=True,
             visual_text_color='#000')
-    return render_template('fujian_map.html', myechart=map.render_embed(),host=REMOTE_HOST,
-        script_list=map.get_js_dependencies(),)
+    return render_template('fujian_map.html', myechart=map.render_embed(), host=REMOTE_HOST,
+                           script_list=map.get_js_dependencies(), )
 
 if __name__ == "__main__":
     app.run()
