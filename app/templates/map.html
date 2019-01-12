@@ -2,7 +2,7 @@
 <html lang="zh-CN">
 <head>
     <meta charset="UTF-8">
-    <title>Flask + pyecharts 整合示例</title>
+    <title>广东省版图</title>
     <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='bootstrap/css/bootstrap.min.css') }}"/>
     <script type="text/javascript" src="{{ url_for('static', filename='bootstrap/js/bootstrap.min.js') }}"></script>
     {#{{ echarts_js_dependencies(m) }}#}
@@ -22,11 +22,11 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="/">Flask pyecharts Demo</a>
+            <a class="navbar-brand" href="/">首页</a>
 
-            <ul class="nav navbar-nav">
-                <li><a href="javascript:">首页</a></li>
-            </ul>
+{#            <ul class="nav navbar-nav">#}
+{#                <li><a href="javascript:">首页</a></li>#}
+{#            </ul>#}
 
         </div>
         <!-- /.nav-collapse -->
@@ -36,7 +36,7 @@
 <!-- /.navbar -->
 <div class="container">
     <div class="panel panel-default">
-        <div class="panel-heading">雄哥的小弟阵容</div>
+        <div class="panel-heading">雄哥的势力范围</div>
         <div class="panel-body">
             {#{{ echarts_container(m) }}#}
             {{ myechart}}

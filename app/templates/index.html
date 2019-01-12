@@ -2,7 +2,7 @@
 <html lang="zh-CN">
 <head>
     <meta charset="UTF-8">
-    <title>Flask + pyecharts 整合示例</title>
+    <title>雄哥组</title>
     <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='bootstrap/css/bootstrap.min.css') }}"/>
     <script type="text/javascript" src="{{ url_for('static', filename='bootstrap/js/bootstrap.min.js') }}"></script>
 </head>
@@ -18,7 +18,7 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="javascript:">彭涛部署的例子</a>
+            <a class="navbar-brand" href="javascript:">彭涛</a>
 
             <ul class="nav navbar-nav">
                 <li><a href="/">首页</a></li>
@@ -32,22 +32,6 @@
 <!-- /.navbar -->
 <div class="container">
     <div class="row">
-        {#<div class="col-md-6">
-            <div class="panel panel-default">
-                <div class="panel-heading">日历热力图</div>
-                <div class="panel-body">
-                    <p><a href="/heatmap/">某人 2017 年微信步数情况</a></p>
-                </div>
-            </div>
-        </div>#}
-        {#<div class="col-md-6">
-            <div class="panel panel-default">
-                <div class="panel-heading">地图</div>
-                <div class="panel-body">
-                    <p><a href="/fujian/">湖北省地图</a></p>
-                </div>
-            </div>
-        </div>#}
         <div class="col-md-6">
             <div class="panel panel-default">
                 <div class="panel-heading">tree</div>
@@ -69,6 +53,22 @@
                 <div class="panel-heading">map</div>
                 <div class="panel-body">
                     <p><a href="/map/">雄哥势力范围</a></p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="panel panel-default">
+                <div class="panel-heading">map</div>
+                <div class="panel-body">
+                    <p><a href="/bar3d/">3d图例</a></p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="panel panel-default">
+                <div class="panel-heading">geolines</div>
+                <div class="panel-body">
+                    <p><a href="/geolines/">飞机图</a></p>
                 </div>
             </div>
         </div>
